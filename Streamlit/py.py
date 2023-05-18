@@ -307,8 +307,8 @@ def Line():
     
 @st.cache(allow_output_mutation=True)
 def load_data():
-    d1 =pd.read_csv('附件1.csv',encoding='ANSI')
-    d2 =pd.read_csv('附件2.csv',encoding='ANSI')
+    d1 =pd.read_csv('附件1.csv',encoding='gbk')
+    d2 =pd.read_csv('附件2.csv',encoding='gbk')
     df=pd.concat([d1,d2])   #合并数据
     df = df.reset_index(drop=True)
 
