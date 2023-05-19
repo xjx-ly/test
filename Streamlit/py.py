@@ -46,9 +46,9 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error, m
 
 from pathlib import Path
 
-path1 = Path(__file__).parents[1] / '/Streamlit/1.csv'
-path2 = Path(__file__).parents[1] / '/Streamlit/2.csv'
-path3 = Path(__file__).parents[1] / '/Streamlit/4.xlsx'
+path1 = Path(__file__).parents[1] / 'Streamlit/1.csv'
+path2 = Path(__file__).parents[1] / 'Streamlit/2.csv'
+path3 = Path(__file__).parents[1] / 'Streamlit/4.xlsx'
 
 
 def Layouts_plotly():
