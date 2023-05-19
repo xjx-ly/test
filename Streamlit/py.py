@@ -307,8 +307,8 @@ def Line():
     
 @st.cache(allow_output_mutation=True)
 def load_data():
-    d1 =pd.read_csv('xjx-ly/test/blob/main/Streamlit/附件1.csv',encoding='gbk')
-    d2 =pd.read_csv('xjx-ly/test/blob/main/Streamlit/附件2.csv',encoding='gbk')
+    d1 =pd.read_csv('xjx-ly/test/blob/main/Streamlit/1.csv',encoding='gbk')
+    d2 =pd.read_csv('xjx-ly/test/blob/main/Streamlit/2.csv',encoding='gbk')
     df=pd.concat([d1,d2])   #合并数据
     df = df.reset_index(drop=True)
 
@@ -875,7 +875,7 @@ def Y_17_18(df1, df2):
 # 大区分类
 @st.cache(allow_output_mutation=True)
 def load_data2():
-    df = pd.read_excel('xjx-ly/test/blob/main/Streamlit/附件4.xlsx')
+    df = pd.read_excel('xjx-ly/test/blob/main/Streamlit/4.xlsx')
 
     return df
 
