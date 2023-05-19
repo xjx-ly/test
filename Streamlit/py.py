@@ -370,8 +370,8 @@ def ChuLi():
     data_1['Zcb'] = data_1['sku_cnt'] * data_1['sku_cost_prc']
 
     data_Yye = data_1.groupby('create_dt',
-                              as_index=False)['Yye', 'Zcb', 'sku_prc',
-                                              'sku_sale_prc'].sum()
+                              as_index=False)[['Yye', 'Zcb', 'sku_prc',
+                                              'sku_sale_prc']].sum()
     data_Yye['Yye'] = data_Yye['Yye'] * 0.0001
     data_Yye['Zcb'] = data_Yye['Zcb'] * 0.0001
 
