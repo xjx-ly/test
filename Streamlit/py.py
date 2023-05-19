@@ -311,7 +311,7 @@ def Line():
     
     
     
-@st.cache(allow_output_mutation=True)
+@st.cache_data(allow_output_mutation=True)
 def load_data():
     d1 =pd.read_csv(path1,encoding="gb18030")
     d2 =pd.read_csv(path2,encoding="gb18030")
@@ -321,7 +321,7 @@ def load_data():
     return df
 
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data(allow_output_mutation=True)
 def ChuLi():
     data_c = load_data()
 
@@ -486,7 +486,7 @@ def line(name, x, y, y_table):
 
 #  预测
 # 找最优的参数 SARIMAX
-@st.cache
+@st.cache_data
 def find_best_params(data: np.array, ):
     # ARIMA的参数
     ps = range(0, 3)
