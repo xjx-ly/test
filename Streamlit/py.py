@@ -311,7 +311,7 @@ def Line():
     
     
     
-@st.cache_data(allow_output_mutation=True)
+@st.cache(allow_output_mutation=True)
 def load_data():
     d1 =pd.read_csv(path1,encoding="gb18030")
     d2 =pd.read_csv(path2,encoding="gb18030")
@@ -321,7 +321,7 @@ def load_data():
     return df
 
 
-@st.cache_data(allow_output_mutation=True)
+@st.cache(allow_output_mutation=True)
 def ChuLi():
     data_c = load_data()
 
