@@ -313,8 +313,8 @@ def Line():
     
 @st.cache(allow_output_mutation=True)
 def load_data():
-    d1 =pd.read_csv(path1,encoding='UTF-8')
-    d2 =pd.read_csv(path2,encoding='UTF-8')
+    d1 =pd.read_csv(path1,encoding='ANSI')
+    d2 =pd.read_csv(path2,encoding='ANSI')
     df=pd.concat([d1,d2])   #合并数据
     df = df.reset_index(drop=True)
 
