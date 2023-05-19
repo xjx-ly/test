@@ -44,6 +44,12 @@ from scipy.stats import pearsonr
 
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error, median_absolute_error
 
+from pathlib import Path
+
+path1 = Path(__file__).parents[1] / '/Streamlit/1.csv'
+path2 = Path(__file__).parents[1] / '/Streamlit/2.csv'
+path3 = Path(__file__).parents[1] / '/Streamlit/4.xlsx'
+
 
 def Layouts_plotly():
     st.set_page_config(
@@ -307,8 +313,8 @@ def Line():
     
 @st.cache(allow_output_mutation=True)
 def load_data():
-    d1 =pd.read_csv('xjx-ly/test/Streamlit/1.csv',encoding='gbk')
-    d2 =pd.read_csv('xjx-ly/test/Streamlit/2.csv',encoding='gbk')
+    d1 =pd.read_csv(path1,encoding='gbk')
+    d2 =pd.read_csv(path2,encoding='gbk')
     df=pd.concat([d1,d2])   #合并数据
     df = df.reset_index(drop=True)
 
@@ -875,7 +881,7 @@ def Y_17_18(df1, df2):
 # 大区分类
 @st.cache(allow_output_mutation=True)
 def load_data2():
-    df = pd.read_excel('xjx-ly/test/Streamlit/4.xlsx')
+    df = pd.read_excel(path3)
 
     return df
 
